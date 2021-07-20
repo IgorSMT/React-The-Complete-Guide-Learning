@@ -13,6 +13,7 @@ export const ExpenseRenderer = props => {
         <Card className="expenses">
             <ExpensesFilter filterChangehandler={filterChangehandler} />
             {
+                // filter for bonus:)
                 props.expenses.filter(f => filterYear ? new Date(f.date).getFullYear() === new Date(filterYear).getFullYear() : true).map((item, index) => {
                     return (
                         <ExpenseItem key={index} expenceItem={item} />
